@@ -31,5 +31,5 @@ Jakarta Batch
 
 # Compatible Implementations
 
-* 'jbatch' v1.0.1 =>  The former Reference Implementation hosted [here](https://github.com/WASdev/standards.jsr352.jbatch) with _com.ibm.jbatch.*_ v1.0.1 Maven coordinates for [implementation](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.container/1.0.1/com.ibm.jbatch.container-1.0.1.jar) and [SPI](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.spi/1.0.1/com.ibm.jbatch.spi-1.0.1.jar) jars.
+* *"jbatch"* v1.0.1 =>  The former Reference Implementation using _com.ibm.jbatch.*_ packages at [source repository](https://github.com/WASdev/standards.jsr352.jbatch).  The v1.0.1 Maven coordinates for [implementation](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.container/1.0.1/com.ibm.jbatch.container-1.0.1.jar) and [SPI](https://repo1.maven.org/maven2/com/ibm/jbatch/com.ibm.jbatch.spi/1.0.1/com.ibm.jbatch.spi-1.0.1.jar) jars are linked.
   * [Recorded TCK Execution](jbatch-tck-run.log)
