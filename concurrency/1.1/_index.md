@@ -1,4 +1,3 @@
-<!-- Template for the root page of a specification release -->
 ---
 title: "Jakarta Concurrency 1.1"
 date: 2019-07-17
