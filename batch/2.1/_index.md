@@ -25,11 +25,22 @@ Jakarta Batch 2.1 will be a minor update with fixes and enhancements.
 
 * Completion of the EE platform portion of the Batch standalone TCK, so that an EE implementation can simply validate Batch compliance against the standlone TCK.  This would allow the Jakarta Batch project to avoid having to maintain a duplicate "fork" of these tests.
 
+### CDI integration defined (when CDI present)
+
+When CDI is present, as within the Jakarta EE Platform, then the integration of Jakarta Batch + CDI will be well-defined and required for an implementation to be certified as Jakarta Batch-compliant.   However, an implementation should be able to certify full Jakarta Batch compliance in the absence of a CDI implementation, e.g. if is certifying itself as a Jakarta Batch implementation but not a Jakarta EE Platform implementation.
+
+The working design for detecting the presence of CDI assumes the TCK would do something like call `CDI.current()`, and, if a `null` value is returned, "no-op" (immediately pass) the relevant tests.
+
 ### It will also contain:
 
 * Bug fixes as they arise during the release cycle
 * Any updates required to meet the Java version requirements of Jakarta EE 10
 * Any requirements identified by other specifications or the Jakarta EE 10 platform projects during the release cycle
+
+## Optional Features:
+
+N/A
+
 
 # Release Record
 
