@@ -15,9 +15,14 @@ Jakarta Batch 2.1 will be a minor update with fixes and enhancements.
 
 ### CDI integration defined
 
+The Jakarta Batch legacy, building from JSR 352, was to allow the use of CDI but not require it, and leave open the ability for an implementation to possibly use another dependency injection technology.
+
+In order to simplify the spec, promote portability and better integration with the rest of the Jakarta Platform, we have decided to require a Jakarta Batch implementation to integrate CDI.  We plan to now enforce this requirement through TCK tests.
+
+We don't believe this will require any special deprecation statement
+
 When CDI is present, as within the Jakarta EE Platform, then the integration of Jakarta Batch + CDI will be well-defined and required for an implementation to be certified as Jakarta Batch-compliant.   However, an implementation should be able to certify full Jakarta Batch compliance in the absence of a CDI implementation, e.g. if is certifying itself as a Jakarta Batch implementation but not a Jakarta EE Platform implementation.
 
-The working design for detecting the presence of CDI assumes the TCK would do something like call `CDI.current()`, and, if a `null` value is returned, "no-op" (immediately pass) the relevant tests.
 
 ### Other enhancements.  
 
@@ -29,6 +34,12 @@ We are open to other minor fixes/enhancements to the Jakarta Batch API from our 
 
 A good deal of the prioritization among these will likely come from the choice of individual committers deciding what to work on.
 
+## It will also contain:
+
+* Bug fixes as they arise during the release cycle
+* Any updates required to meet the Java version requirements of Jakarta EE 10
+* Any requirements identified by other specifications or the Jakarta EE 10 platform projects during the release cycle
+
 ## It may contain: 
 
 ### Standalone TCK refactor to include EE tests
@@ -37,11 +48,7 @@ Refactoring of the Batch standalone TCK, so the full suite, including the EE pla
 
 This is the main TCK-related item, tracked via https://github.com/eclipse-ee4j/batch-tck/milestone/1
 
-## It will also contain:
 
-* Bug fixes as they arise during the release cycle
-* Any updates required to meet the Java version requirements of Jakarta EE 10
-* Any requirements identified by other specifications or the Jakarta EE 10 platform projects during the release cycle
 
 ## Optional Features:
 
